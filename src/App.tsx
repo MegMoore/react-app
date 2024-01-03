@@ -9,6 +9,7 @@ import Like from "./components/Like";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
 import Expandabletext from "./components/Expandabletext";
+import Form from "./components/Form";
 
 function App() {
   const [cartItems, setCartItems] = useState(["Product1", "Product2"]);
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div>
+      <Form />
       <Expandabletext maxChars={10}>hello world</Expandabletext>
       <NavBar cartItemsCount={cartItems.length} />
       <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
